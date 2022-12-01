@@ -1805,7 +1805,7 @@ GameObject:
   - component: {fileID: 1035344369}
   - component: {fileID: 1035344368}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1894,7 +1894,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1035344370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1539173725}
+        m_TargetAssemblyTypeName: Changscene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Main_Ui
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1035344370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,7 +1927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 68c502d45029cff4fb0adef7faf8d3fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db29b69e2ef9fe54997f788ff04f171a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4283,11 +4295,6 @@ MonoBehaviour:
   Type_0: {fileID: 21300000, guid: a3a956ec83344094694febc093feea37, type: 3}
   Waterflow: {fileID: 21300000, guid: e16d27875a88d8f46b5b441f53c2647b, type: 3}
   OutWaterflow: {fileID: 1657527894}
-  CorrectPositions:
-  - 0,0
-  - 1,0
-  - 1,1
-  - 1,2
   timeStart: 0
   Minutes: 0
   TimertextBox: {fileID: 1596586372}

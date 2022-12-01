@@ -21,8 +21,7 @@ public class Level2Controller : MonoBehaviour
     public Sprite Waterflow;
     public GameObject OutWaterflow;
     
-    
-    public string[] CorrectPositions;
+
 
     public float timeStart;
     public int Minutes;
@@ -62,7 +61,6 @@ public class Level2Controller : MonoBehaviour
         Click1.transform.localScale = new Vector2(1f, 1f);
         Click2.transform.localScale = new Vector2(1f, 1f);
         ButtonClickedCount = 0;
-        CheckResult();
         GeneratorWaterFlow();
 
         IsResultCheck = true;
@@ -103,21 +101,7 @@ public class Level2Controller : MonoBehaviour
         }
     }
 
-    private void CheckResult()
-    {
-        for(int i = 0; i<=CorrectPositions.Length-1; i++)
-        {
-            if (GameObject.Find(CorrectPositions[i]).GetComponent<Image>().sprite.name == "Type-1")
-            {
-                Debug.Log(CorrectPositions[i] + "Here");
-
-            }
-            else
-            {
-                break;
-            }
-        }
-    }
+    
 
     private void GeneratorWaterFlow()
     {
@@ -134,10 +118,10 @@ public class Level2Controller : MonoBehaviour
         {
             GameObject.Find("0,1").GetComponent<Image>().sprite = Waterflow;
         }
-        if (GameObject.Find("1,1").GetComponent<Image>().sprite.name == "Type-1" && GameObject.Find("1,2").GetComponent<Image>().sprite.name == "Type-0")
+        if (GameObject.Find("0,0").GetComponent<Image>().sprite.name == "Type-5" && GameObject.Find("1,0").GetComponent<Image>().sprite.name == "Type-3" && GameObject.Find("1,1").GetComponent<Image>().sprite.name == "Type-1" && GameObject.Find("1,2").GetComponent<Image>().sprite.name == "Type-0")
         {
             GameObject.Find("1,2").GetComponent<Image>().sprite = Waterflow;
-            
+
         }
         if (GameObject.Find("0,0").GetComponent<Image>().sprite.name == "Type-5" && GameObject.Find("1,0").GetComponent<Image>().sprite.name == "Type-3" && GameObject.Find("1,1").GetComponent<Image>().sprite.name == "Type-0")
         {

@@ -20,9 +20,7 @@ public class Level3Controller : MonoBehaviour
     public Sprite Type_0;
     public Sprite Waterflow;
     public GameObject OutWaterflow;
-    
-    
-    public string[] CorrectPositions;
+
 
     public float timeStart;
     public int Minutes;
@@ -62,7 +60,7 @@ public class Level3Controller : MonoBehaviour
         Click1.transform.localScale = new Vector2(1f, 1f);
         Click2.transform.localScale = new Vector2(1f, 1f);
         ButtonClickedCount = 0;
-        CheckResult();
+       
         GeneratorWaterFlow();
 
         IsResultCheck = true;
@@ -103,21 +101,7 @@ public class Level3Controller : MonoBehaviour
         }
     }
 
-    private void CheckResult()
-    {
-        for(int i = 0; i<=CorrectPositions.Length-1; i++)
-        {
-            if (GameObject.Find(CorrectPositions[i]).GetComponent<Image>().sprite.name == "Type-1")
-            {
-                Debug.Log(CorrectPositions[i] + "Here");
-
-            }
-            else
-            {
-                break;
-            }
-        }
-    }
+  
 
     private void GeneratorWaterFlow()
     {
